@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import AllProjects from '../../components/AllProjects';
 
 const Projects = () => {
@@ -9,7 +8,7 @@ const Projects = () => {
     const { data: categories = [] } = useQuery({
         queryKey: ["categories"],
         queryFn: async () => {
-            const res = await fetch("http://localhost:5000/categories")
+            const res = await fetch("https://developer-mahin-server.vercel.app/categories")
             const data = await res.json()
             return data
         }

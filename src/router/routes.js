@@ -53,14 +53,14 @@ const router = createBrowserRouter([
                 path: "/projects_details/:category_name",
                 element: <ProjectsDetails></ProjectsDetails>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/category/${params.category_name}`)
+                    return fetch(`https://developer-mahin-server.vercel.app/category/${params.category_name}`)
                 }
             },
             {
                 path: "/details/:id",
                 element: <SingleProductDetails></SingleProductDetails>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/details/${params.id}`)
+                    return fetch(`https://developer-mahin-server.vercel.app/details/${params.id}`)
                 }
             }
         ]

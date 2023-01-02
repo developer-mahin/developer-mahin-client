@@ -7,7 +7,7 @@ const AllProjects = () => {
     const { data: allProjects = [] } = useQuery({
         queryKey: ["allProjects"],
         queryFn: async () => {
-            const res = await fetch("http://localhost:5000/allProjects")
+            const res = await fetch("https://developer-mahin-server.vercel.app/allProjects")
             const data = await res.json()
             return data
         }
