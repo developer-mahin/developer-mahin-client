@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { useLoaderData, useNavigation} from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import { TfiWorld } from "react-icons/tfi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
@@ -35,7 +35,7 @@ const SingleProductDetails = () => {
             <div className='py-6'>
                 <h3 className='text-2xl font-semibold text-gray-700'>Image Gallery</h3>
 
-                <div>
+                <div data-aos="zoom-in">
                     <Swiper
                         slidesPerView={"auto"}
                         spaceBetween={30}
@@ -60,21 +60,23 @@ const SingleProductDetails = () => {
                 </div>
 
             </div>
-            <div>
+            <div data-aos="zoom-in">
                 <h2 className='lg:text-4xl text-2xl font-semibold text-gray-700 pt-6 pb-2'>Application features</h2>
                 <hr className='border border-gray-300' />
                 <div className='mt-6'>
                     {
-                        details.map((single, index) => <li className='py-1 font-medium' key={index}>{single}</li>)
+                        details.map((single, index) =>
+                            <li data-aos="zoom-in" className='py-1 font-medium' key={index}>{single}</li>
+                        )
                     }
                 </div>
             </div>
-            <div>
+            <div data-aos="zoom-in">
                 <h2 className='lg:text-4xl text-2xl font-semibold text-gray-700 pt-6 pb-2'>Technology used.</h2>
                 <hr className='border border-gray-300' />
                 <div className='mt-6'>
                     {
-                        technology.map((tech, index) => <li className='py-1 font-medium' key={index}>{tech}</li>)
+                        technology.map((tech, index) => <li data-aos="zoom-in" className='py-1 font-medium' key={index}>{tech}</li>)
                     }
                 </div>
             </div>

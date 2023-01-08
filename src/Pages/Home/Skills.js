@@ -92,7 +92,7 @@ const Skills = () => {
             <div className='py-6 md:py-0'>
                 <div>
                     <div className='mt-6'>
-                        <h2 className='text-center text-xl text-gray-500'>Technology That I used</h2>
+                        <h2 data-aos="zoom-in" className='text-center text-xl text-gray-500'>Technology That I used</h2>
                         <hr className='lg:w-1/2 w-10/12 mx-auto border border-gray-200 rounded' />
                     </div>
                     <div className='grid lg:grid-cols-7 md:grid-cols-4 grid-cols-3 gap-6 items-center justify-items-center lg:mt-6 mt-6'>
@@ -114,7 +114,7 @@ const Skills = () => {
 
             <div className='py-6 md:py-0'>
                 <div className='lg:mt-10 mt-3'>
-                    <h2 className='text-center text-xl text-gray-500'>With Familiar</h2>
+                    <h2 data-aos="zoom-in" className='text-center text-xl text-gray-500'>With Familiar</h2>
                     <hr className='lg:w-1/2 w-10/12 mx-auto border border-gray-200 rounded' />
                 </div>
                 <div className='grid lg:grid-cols-7 md:grid-cols-4 grid-cols-3 gap-6 items-center justify-items-center lg:mt-6 mt-6'>
@@ -133,7 +133,7 @@ const Skills = () => {
 
             <div className='py-6 md:py-0'>
                 <div className='lg:mt-10 mt-3'>
-                    <h2 className='text-center text-xl text-gray-500'>Soft Skills</h2>
+                    <h2 data-aos="zoom-in" className='text-center text-xl text-gray-500'>Soft Skills</h2>
                     <hr className='lg:w-1/2 w-10/12 mx-auto border border-gray-200 rounded' />
                 </div>
                 <div className='grid lg:grid-cols-7 md:grid-cols-4 grid-cols-3 gap-6 items-center justify-items-center lg:mt-6 mt-6'>

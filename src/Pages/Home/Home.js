@@ -5,6 +5,10 @@ import Contact from './Contact';
 import Services from './Services';
 import Skills from './Skills';
 import Projects from "./Projects"
+import ScrollToTop from 'react-scroll-up';
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
+
+
 
 const Home = () => {
     return (
@@ -15,6 +19,19 @@ const Home = () => {
             <Services></Services>
             <Projects></Projects>
             <Contact></Contact>
+
+            <ScrollToTop style={{
+                position: 'fixed',
+                bottom: 50,
+                right: 30,
+                cursor: 'pointer',
+                transitionDuration: '0.2s',
+                transitionTimingFunction: 'linear',
+                transitionDelay: '0s'
+            }} duration="1400" showUnder={700}>
+                <span> <BsFillArrowUpCircleFill className="lg:text-4xl text-2xl text-cyan-600 shadow-2xl rounded-full "></BsFillArrowUpCircleFill> </span>
+            </ScrollToTop>
+
         </div>
     );
 };

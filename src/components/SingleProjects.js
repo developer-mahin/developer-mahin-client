@@ -10,7 +10,7 @@ const SingleProjects = ({ project }) => {
     const { projectImg, projectName, shortDetails, _id } = project;
 
     return (
-        <div className='shadow-lg rounded-lg'>
+        <div data-aos="zoom-in" className='shadow-lg rounded-lg'>
             <div>
                 <PhotoProvider>
                     <PhotoView src={projectImg}>
