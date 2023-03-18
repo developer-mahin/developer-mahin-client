@@ -16,8 +16,8 @@ const AllProjects = () => {
     return (
         <div className='grid lg:grid-cols-3 grid-cols-1 gap-6 mt-6 '>
             {
-                allProjects.map(project => <SingleProjects
-                    key={project._id}
+                allProjects.map((project, index) => <SingleProjects
+                    key={index}
                     project={project}
                 ></SingleProjects>)
             }

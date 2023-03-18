@@ -98,7 +98,7 @@ const Skills = () => {
                     <div className='grid lg:grid-cols-7 md:grid-cols-4 grid-cols-3 gap-6 items-center justify-items-center lg:mt-6 mt-6'>
 
                         {
-                            skills.map(skill => <div data-aos="zoom-in" className='flex justify-between items-center gap-1 skillImg' key={skill.id}>
+                            skills.map((skill, index) => <div key={index} data-aos="zoom-in" className='flex justify-between items-center gap-1 skillImg'>
 
                                 <img className='w-6 h-6 skillImg' src={skill.img} alt="" />
                                 <h2>{skill.name}</h2>
@@ -120,7 +120,7 @@ const Skills = () => {
                 <div className='grid lg:grid-cols-7 md:grid-cols-4 grid-cols-3 gap-6 items-center justify-items-center lg:mt-6 mt-6'>
 
                     {
-                        familiars.map(familiar => <div data-aos="zoom-in" className='flex justify-between items-center gap-1 skillImg' key={familiar.id}>
+                        familiars.map((familiar, index) => <div key={index} data-aos="zoom-in" className='flex justify-between items-center gap-1 skillImg' >
 
                             <img className='w-6 h-6 skillImg' src={familiar.img} alt="" />
                             <h2>{familiar.name}</h2>
@@ -139,7 +139,7 @@ const Skills = () => {
                 <div className='grid lg:grid-cols-7 md:grid-cols-4 grid-cols-3 gap-6 items-center justify-items-center lg:mt-6 mt-6'>
 
                     {
-                        softSkills.map(softSkill => <div data-aos="zoom-in" className='flex justify-between items-center gap-1 skillImg' key={softSkill.id}>
+                        softSkills.map((softSkill, index) => <div key={index} data-aos="zoom-in" className='flex justify-between items-center gap-1 skillImg' >
 
                             <img className='w-6 h-6 skillImg' src={softSkill.img} alt="" />
                             <h2>{softSkill.name}</h2>

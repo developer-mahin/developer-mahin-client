@@ -52,7 +52,7 @@ const Services = () => {
 
             <div className='grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-6 mt-6'>
                 {
-                    servicesInfo.map(service => <div key={service.id} className='border shadow-lg rounded-lg p-6' data-aos="zoom-in">
+                    servicesInfo.map((service, index) => <div key={index} className='border shadow-lg rounded-lg p-6' data-aos="zoom-in">
                         <div className='flex justify-center items-center'>
                             <div className='w-24 h-24 rounded-full border-2 flex justify-center items-center'>
                                 <img className='w-16 h-16 ' src={service.img} alt="" />

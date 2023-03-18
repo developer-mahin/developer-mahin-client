@@ -12,7 +12,9 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 const SingleProductDetails = () => {
 
     const data = useLoaderData()
-    const { details, gitHubClient, gitHubServer, imgURL, liveURl, technology } = data;
+    const { details, gitHubClient, githubServer, imgURL, liveURl, technology } = data;
+
+    console.log(data)
 
     const navigation = useNavigation()
     if (navigation.state === "loading") {
@@ -29,7 +31,7 @@ const SingleProductDetails = () => {
             <h2 className='text-2xl font-semibold py-1.5'>Project Links</h2>
             <div className='lg:w-[420px] w-full flex justify-between items-enter'>
                 <a className='flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-blue-500 lg:px-5 px-3 py-1.5 rounded-full text-white font-medium' href={gitHubClient} target="blank"> <FaGithub className='text-xl' /> <span className='mt-1'>Client Code</span>  </a>
-                <a className='flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-blue-500 lg:px-5 px-3 py-1.5 rounded-full text-white font-medium' href={gitHubServer} target="blank"> <FaGithub className='text-xl' /> <span className='mt-1'>Server Code</span>  </a>
+                <a className='flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-blue-500 lg:px-5 px-3 py-1.5 rounded-full text-white font-medium' href={githubServer} target="blank"> <FaGithub className='text-xl' /> <span className='mt-1'>Server Code</span>  </a>
                 <a className='flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-blue-500 lg:px-5 px-3 py-1.5 rounded-full text-white font-medium' href={liveURl} target="blank" ><TfiWorld className='text-xl' /> <span className='mt-1'>Visit</span></a>
             </div>
             <div className='py-6'>
@@ -46,7 +48,7 @@ const SingleProductDetails = () => {
                         className="mySwiper"
                     >
                         {
-                            imgURL.map(img => <>
+                            imgURL.map((img, index) => <div key={index}>
                                 <SwiperSlide>
                                     <PhotoProvider>
                                         <PhotoView src={img}>
@@ -54,7 +56,7 @@ const SingleProductDetails = () => {
                                         </PhotoView>
                                     </PhotoProvider>
                                 </SwiperSlide>
-                            </>)
+                            </div>)
                         }
                     </Swiper>
                 </div>
@@ -66,7 +68,7 @@ const SingleProductDetails = () => {
                 <div className='mt-6'>
                     {
                         details.map((single, index) =>
-                            <li data-aos="zoom-in" className='py-1 font-medium' key={index}>{single}</li>
+                            <li key={index} data-aos="zoom-in" className='py-1 font-medium' >{single}</li>
                         )
                     }
                 </div>
@@ -76,7 +78,7 @@ const SingleProductDetails = () => {
                 <hr className='border border-gray-300' />
                 <div className='mt-6'>
                     {
-                        technology.map((tech, index) => <li data-aos="zoom-in" className='py-1 font-medium' key={index}>{tech}</li>)
+                        technology.map((tech, index) => <li key={index} data-aos="zoom-in" className='py-1 font-medium' >{tech}</li>)
                     }
                 </div>
             </div>
