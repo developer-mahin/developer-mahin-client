@@ -7,6 +7,7 @@ import Skills from './Skills';
 import Projects from "./Projects"
 import ScrollToTop from 'react-scroll-up';
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import FacebookChat from '../../components/FacebookChat/FacebookChat';
 
 
 
@@ -31,7 +32,7 @@ const Home = () => {
             }} duration="1400" showUnder={700}>
                 <span> <BsFillArrowUpCircleFill className="lg:text-4xl text-2xl text-cyan-600 shadow-2xl rounded-full "></BsFillArrowUpCircleFill> </span>
             </ScrollToTop>
-
+            <FacebookChat />
         </div>
     );
 };
